@@ -74,4 +74,15 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+  --ion-no-margin :0px;
+}
+.no-padding{
+  padding:0
+}
+
+.go_to_bottom{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }

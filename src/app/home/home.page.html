@@ -1,14 +1,93 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>
       Ionic Blank
     </ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+    
+    <ion-item>operacion: {{method}}</ion-item>
+    <ion-item>numero : {{number}}</ion-item>
+    <ion-item>resultado: {{result}}</ion-item>
+    <ion-item>a: {{number_a}}</ion-item>
+    <ion-item>b: {{number_b}}</ion-item>
+
+    <ion-grid class="no-padding go_to_bottom">
+        <ion-row>
+            <ion-col class="no-padding ion-no-margin">
+                <ion-button class="secondary" (click)="clear()" size="large" expand="full" color="danger">C</ion-button>
+            </ion-col>
+            <ion-col class="no-padding ion-no-margin">
+                <ion-button color="dark" (click)="addNumber(0)" expand="full" size="large">√</ion-button>
+            </ion-col>
+            <ion-col class="no-padding ion-no-margin">
+                <ion-button color="dark" (click)="change_method('%')" expand="full" size="large">%</ion-button>
+            </ion-col>
+            <ion-col class="no-padding ion-no-margin">
+              <ion-button color="dark" (click)="change_method('/')" expand="full" size="large">/</ion-button>
+            </ion-col>
+          </ion-row>
+        <ion-row>
+          <ion-col class="ion-no-margin no-padding">
+            <ion-button color="primary" (click)="addNumber(7)" expand="full" size="large">7</ion-button>
+          </ion-col>
+          <ion-col class="ion-no-margin no-padding">
+            <ion-button color="primary" (click)="addNumber(8)" expand="full" size="large">8</ion-button>
+          </ion-col>
+          <ion-col class="ion-no-margin no-padding">
+            <ion-button color="primary" (click)="addNumber(9)" expand="full" size="large">9</ion-button>
+          </ion-col>
+          <ion-col  class="ion-no-margin no-padding">
+            <ion-button color="dark" (click)="change_method('*')" expand="full" size="large">*</ion-button>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col class="ion-no-margin no-padding">
+              <ion-button color="primary" (click)="addNumber(4)" expand="full" size="large">4</ion-button>
+          </ion-col>
+          <ion-col class="ion-no-margin no-padding">
+            <ion-button color="primary" (click)="addNumber(5)" expand="full" size="large">5</ion-button>
+          </ion-col>
+          <ion-col class="ion-no-margin no-padding">
+            <ion-button color="primary" (click)="addNumber(6)" expand="full" size="large">6</ion-button>
+          </ion-col>
+          <ion-col class="ion-no-margin no-padding">
+              <ion-button color="dark" (click)="change_method('-')" expand="full" size="large">-</ion-button>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <ion-col class="ion-no-margin no-padding">
+                <ion-button color="primary" (click)="addNumber(1)" expand="full" size="large">1</ion-button>
+            </ion-col>
+            <ion-col class="ion-no-margin no-padding">
+                <ion-button color="primary" (click)="addNumber(2)" expand="full" size="large">2</ion-button>
+            </ion-col>
+            <ion-col class="ion-no-margin no-padding">
+                <ion-button color="primary" (click)="addNumber(3)" expand="full" size="large">3</ion-button>
+            </ion-col>
+          <ion-col class="ion-no-margin no-padding">
+            <ion-button color="dark" (click)="change_method('+')" expand="full" size="large">+</ion-button>
+          </ion-col>
+        </ion-row>
+
+        <ion-row >
+          <ion-col class="ion-no-margin no-padding">
+              <ion-button color="primary"  expand="full" size="large">||</ion-button>
+          </ion-col>
+          <ion-col class="ion-no-margin no-padding">
+              <ion-button color="primary" (click)="addNumber(0)" expand="full" size="large">0</ion-button>
+          </ion-col>
+          <ion-col class="ion-no-margin no-padding">
+              <ion-button color="primary"  expand="full" size="large">||</ion-button>
+          </ion-col>
+          <ion-col class="ion-no-margin no-padding">
+            <ion-button color="secondary" (click)="get_result()" expand="full" size="large">=</ion-button>
+          </ion-col>
+        </ion-row>
+    </ion-grid>
+
 </ion-content>
